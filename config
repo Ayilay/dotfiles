@@ -1,0 +1,185 @@
+############################################################
+# Movement/Mod key mappings
+############################################################
+
+# I use the Super key, you might prefer Alt
+set $mod Mod4
+
+# These will help you get used to vim movements ;)
+set $up k
+set $down j
+set $left h
+set $right l
+
+############################################################
+# Program Shortcuts
+############################################################
+
+# Opens Google Chrome
+bindsym $mod+c exec google-chrome-stable
+
+# Opens Nautilus for viewing files
+# WARNING this might not behave well if you're using Ubuntu
+# I don't have a problem now but I did when I had Ubuntu
+# Have fun with it
+bindsym $mod+n exec nautilus .
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+
+# starts a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+############################################################
+# Window Resizing
+############################################################
+
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+bindsym $mod+Ctrl+$left       resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+$down       resize grow height 5 px or 5 ppt
+bindsym $mod+Ctrl+$up         resize shrink height 5 px or 5 ppt
+bindsym $mod+Ctrl+$right      resize grow width 5 px or 5ppt
+
+############################################################
+# Suspend/Shutdown/etc Modes
+############################################################
+# Stolen from here:
+# https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout.1.html
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "$mode_system"
+
+
+
+############################################################
+# Window/Workspace Manipulations
+############################################################
+
+# change focus (no cursor keys allowed mwahaha)
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+############################################################
+# Layout Option things (I use these scarcely)
+############################################################
+
+# Determine how to split (vertical/horizantal)
+# NOTICE I use semicolon because mod+h is used to focus/move left
+# Map it to whatever
+bindsym $mod+semicolon split h
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+############################################################
+# Status Bar (Nothing fancy here, feel free to customize)
+############################################################
+
+bar {
+  status_command i3status
+}
+
+############################################################
+# Font Config
+############################################################
+font pango:monospace 8
+
+############################################################
+# Laptop Keyboard Buttons Functionality
+# (Useful for laptop only)
+############################################################
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%; exec --no-startup-id pactl set-sink-mute 0 0 #increase sound volume and unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+############################################################
+# Reload i3 stuff
+############################################################
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
