@@ -20,6 +20,7 @@
 3. arp-scan
 4. java jdk latest version
 5. libc and g++ compilers
+6. xclip
 
 ## Eclipse Settings
 
