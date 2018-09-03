@@ -24,3 +24,7 @@ map <C-l> :tabm+ <CR>
 
 map <Tab> :tabn <CR>
 map <S-Tab> :tabp <CR>
+
+" Save current file with sudo privileges
+" https://www.cyberciti.biz/faq/vim-vi-text-editor-save-file-without-root-permission/
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
