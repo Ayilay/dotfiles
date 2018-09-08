@@ -12,9 +12,9 @@ alias plz='sudo $(history -p !!)'
 
 # Opens the i3config file for editing
 alias i3config='vim ~/.config/i3/config'
-
-# Edit this document
 alias vimalias='vim /home/ayilay/.bash_aliases'
+alias vimrc='vim ~/.vimrc'
+alias bashrc='vim ~/.bashrc'
 
 # Re-source .bashrc and aliases
 alias re-source='source /home/ayilay/.bashrc; source /home/ayilay/.bash_aliases;'
@@ -57,3 +57,6 @@ alias .5='cd ../../../../..'
 alias ddprog='sudo kill -USR1 `pidof dd`'
 # helpful for sync command
 alias syncprog='watch grep -e Dirty: -e Writeback: /proc/meminfo'
+
+# When ranger exits, exit in the last directory selected
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
