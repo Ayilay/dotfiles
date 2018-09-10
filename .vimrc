@@ -8,6 +8,11 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 
+" The default vim clipboard is the system clipboard
+" Requires vim compiled with +clipboard support or
+" running `gvim -v` instead of `vim`
+set clipboard=unnamedplus
+
 " UCSD RETARD SETTINGS
 "set tabstop=2
 "set shiftwidth=2

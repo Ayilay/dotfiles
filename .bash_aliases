@@ -60,3 +60,8 @@ alias syncprog='watch grep -e Dirty: -e Writeback: /proc/meminfo'
 
 # When ranger exits, exit in the last directory selected
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+# If gVim is installed, use it instead of regular vim to get clipboard support <3
+if [ -n `which gvim` ]; then
+    alias vim='gvim -v'
+fi
