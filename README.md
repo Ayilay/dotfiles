@@ -12,6 +12,7 @@
 1. bashrc
 2. bash_aliases
 3. vimrc
+4. gitconfig
 
 ## Other Necessary stuff
 
@@ -21,6 +22,7 @@
 4. java jdk latest version
 5. libc and g++ compilers
 6. xclip
+7. Vundle
 
 ## Eclipse Settings
 
