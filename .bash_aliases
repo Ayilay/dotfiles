@@ -65,3 +65,6 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 if [ -n `which gvim` ]; then
     alias vim='gvim -v'
 fi
+
+# Invoke make with multiple parallel jobs to compile with the speed of the gods
+alias make='make -j6'
