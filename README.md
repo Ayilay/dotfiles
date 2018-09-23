@@ -23,6 +23,8 @@
 5. libc and g++ compilers
 6. xclip
 7. Vundle
+8. avr-libc and binutils-arm-none-eabi
+9. avrdude
 
 ## Eclipse Settings
 
