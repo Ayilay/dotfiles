@@ -43,12 +43,12 @@ set cindent
 set expandtab
 
 " REGULAR SETTINGS
-set tabstop=4
-set shiftwidth=4
+" set tabstop=4
+" set shiftwidth=4
 
 " UCSD RETARD SETTINGS
-"set tabstop=2
-"set shiftwidth=2
+set tabstop=2
+set shiftwidth=2
 "match Error /\%81v.\+/
 
 

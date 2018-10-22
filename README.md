@@ -16,15 +16,16 @@
 
 ## Other Necessary stuff
 
-1. git
-2. binutils and make
-3. arp-scan
-4. java jdk latest version
-5. libc and g++ compilers
-6. xclip
-7. Vundle
-8. avr-libc and binutils-arm-none-eabi
-9. avrdude
+1.  git
+2.  binutils and make
+3.  arp-scan
+4.  java jdk latest version
+5.  libc and g++ compilers
+6.  xclip
+7.  Vundle
+8.  avr-libc and binutils-arm-none-eabi
+9.  avrdude
+10. nemo
 
 ## Eclipse Settings
 

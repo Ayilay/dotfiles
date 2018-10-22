@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Eclipse
+Comment=Eclipse Launcher
+Exec=/home/ayilay/.local/eclipse/eclipse/eclipse
+Icon=/home/ayilay/.local/eclipse/eclipse/icon.xpm
+
