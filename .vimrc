@@ -18,6 +18,13 @@ Plugin 'easymotion/vim-easymotion'
 " Adds git status indicators
 Plugin 'airblade/vim-gitgutter'
 
+" Absolute Wankery, look this up
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'Valloric/YouCompleteMe'
+
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()
 
 

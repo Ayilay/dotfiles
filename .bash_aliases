@@ -20,7 +20,9 @@ alias bashrc='vim ~/.bashrc'
 alias re-source='source /home/ayilay/.bashrc; source /home/ayilay/.bash_aliases;'
 
 # copy directories too by default, why the hell would you not want that?
+# same with rm, sometimes annoying
 alias cp='cp -r'
+alias rm='rm -r'
 
 # Formats code (look up astyle, it's pretty nifty)
 alias myastyle='astyle --style=allman --indent=spaces=2 --convert-tabs --indent-classes --indent-switches --indent-namespaces --pad-header --pad-oper --align-pointer=type --keep-one-line-statements'

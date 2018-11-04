@@ -11,4 +11,4 @@
 [alias]
 	unstage = reset HEAD --
 	gconf = config --global
-	hist = log --graph --oneline
+	hist = log --graph --oneline --decorate --all
