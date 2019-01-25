@@ -1,6 +1,6 @@
 # These are useful when working with i3
 # Copies working directory into clipboard (needs xclip)
-alias cpwd='pwd | xclip -selection c'
+alias cpwd='pwd | xclip -sel c'
 # cd to filepath in clipboard (needs xclip)
 alias cdp='cd `xclip -selection c -o`'
 
@@ -70,3 +70,6 @@ fi
 
 # Invoke make with multiple parallel jobs to compile with the speed of the gods
 alias make='make -j6'
+
+# Opens a file manager at the current directory. Modify to use whatever your current file manager is
+alias filemanager='dolphin . 1>/dev/null 2>/dev/null &'
