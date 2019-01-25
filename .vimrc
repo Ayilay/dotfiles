@@ -19,8 +19,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 
 " Absolute Wankery, look this up
-Plugin 'rdnetto/YCM-Generator'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
+"Plugin 'Valloric/YouCompleteMe'
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
@@ -70,6 +70,10 @@ set clipboard=unnamedplus
 
 " Change the leader key to ',' for various shortcuts
 let mapleader = ','
+
+" When pressing Ctrl+j/k, scroll up/down while maintaining the cursor centered
+nnoremap <C-j> jzz
+nnoremap <C-k> kzz
 
 " Ctrl+h/l moves the tab left/right
 map <C-h> :tabm- <CR>
