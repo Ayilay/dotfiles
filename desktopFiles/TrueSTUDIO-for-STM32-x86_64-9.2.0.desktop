@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Atollic TrueSTUDIO for STM32 9.2.0
+Comment=Atollic TrueSTUDIO for STM32 9.2.0
+GenericName=TrueSTUDIO
+Exec=/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.2.0//ide/TrueSTUDIO %F
+Icon=/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.2.0//ide/TrueSTUDIO.ico
+Path=/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.2.0//ide/
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Development
