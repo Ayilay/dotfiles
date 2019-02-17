@@ -22,6 +22,9 @@ Plugin 'airblade/vim-gitgutter'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'Valloric/YouCompleteMe'
 
+" Sublime-text-like multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 

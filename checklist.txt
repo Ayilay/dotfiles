@@ -1,0 +1,13 @@
+*) Install sudo if not present, and add user to /etc/sudoers
+*) sudo apt-install git vim vim-gtk3
+*) Map caps lock to escape, and 2-shifts to caps lock
+*) Configure github ssh keys
+*) git clone git@github.com:Ayilay/dotfiles.git, and run ./create-symlinks
+*) sudo apt install binutils make tmux nmap arp-scan g++ xclip avr-libc binutils-arm-none-eabi avrdude nemo ranger exfat-utils
+*) git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+*) Open vim and PluginInstall vundle
+*) Install google chrome
+*) Add shortcuts to launch file manager (nemo) and google chrome
+*) Install konsole, and fix theme (font size and colors), add custom theme under /usr/share/konsole
+*) Add windows partition to fstab, create symlink to windows/Users/Ayilay as winAyilay under home dir
+*) Config konsole tab-change shortcuts to shift-tab/ctrl-shift-tab
