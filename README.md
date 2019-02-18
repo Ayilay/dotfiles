@@ -17,7 +17,7 @@
 ## Other Necessary stuff
 
 1.  git
-2.  binutils and make
+2.  binutils and make, gdb
 3.  arp-scan
 4.  java jdk latest version
 5.  libc and g++ compilers
