@@ -16,17 +16,19 @@
 
 ## Other Necessary stuff
 
-1.  git
-2.  binutils and make, gdb
-3.  arp-scan
-4.  java jdk latest version
-5.  libc and g++ compilers
-6.  xclip
-7.  Vundle
-8.  avr-libc and binutils-arm-none-eabi
-9.  avrdude
-10. nemo
-11. ranger
+* git
+* binutils and make
+* gdb
+* valgrind
+* arp-scan
+* java jdk latest version
+* libc and g++ compilers
+* xclip
+* Vundle
+* avr-libc and binutils-arm-none-eabi
+* avrdude
+* nemo
+* ranger
 
 ## fstab Settings
 Configure fstab to mount ntfs windows partition on boot:

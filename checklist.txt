@@ -3,7 +3,7 @@
 *) Map caps lock to escape, and 2-shifts to caps lock
 *) Configure github ssh keys
 *) git clone git@github.com:Ayilay/dotfiles.git, and run ./create-symlinks
-*) sudo apt install binutils gdb make tmux nmap arp-scan g++ xclip avr-libc binutils-arm-none-eabi avrdude nemo ranger exfat-utils gcc-arm-none-eabi
+*) sudo apt install binutils valgrind gdb make tmux nmap arp-scan g++ xclip avr-libc binutils-arm-none-eabi avrdude nemo ranger exfat-utils gcc-arm-none-eabi
 *) git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 *) Open vim and PluginInstall vundle
 *) Install google chrome
