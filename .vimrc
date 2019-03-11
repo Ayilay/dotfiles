@@ -59,7 +59,7 @@ set expandtab
 " UCSD RETARD SETTINGS
 set tabstop=2
 set shiftwidth=2
-match Error /\%81v.\+/
+"match Error /\%81v.\+/
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
