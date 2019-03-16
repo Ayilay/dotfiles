@@ -12,3 +12,11 @@
 *) Add windows partition to fstab, create symlink to windows/Users/Ayilay as winAyilay under home dir
 *) Config konsole tab-change shortcuts to shift-tab/ctrl-shift-tab
 *) Fix brightness button not working: https://itsfoss.com/fix-brightness-ubuntu-1310/
+*) Theme Settings: 
+    > Change Cinnamon theme to Adapta-Nokto
+    > Icons to Menta
+    > Edit /etc/lightdm/lightdm.conf, set greeter-session to lightdm-gtk-greeter
+    > install lightdm-gtk-greeter-settings
+      - Set icon to Ayilay
+      - Set BG to solid gray color
+      - Change theme to Green Submarine
