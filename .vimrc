@@ -5,7 +5,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/home/ayilay/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Needed for Vundle to run

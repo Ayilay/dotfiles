@@ -13,6 +13,8 @@
 *) Config konsole tab-change shortcuts to shift-tab/ctrl-shift-tab
 *) Fix brightness button not working: https://itsfoss.com/fix-brightness-ubuntu-1310/
 *) Theme Settings: 
+    > Changed GRUB background (place in /boot/grub, edit /etc/default/grub with GRUB_BACKGROUND,
+        ensure image is 640x480 PNG, 8-bit color, run update-grub)
     > Change Cinnamon theme to Adapta-Nokto
     > Icons to Menta
     > Edit /etc/lightdm/lightdm.conf, set greeter-session to lightdm-gtk-greeter
