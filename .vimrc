@@ -57,8 +57,9 @@ set expandtab
 " set shiftwidth=4
 
 " UCSD RETARD SETTINGS
-set tabstop=2
 set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 "match Error /\%81v.\+/
 
 
