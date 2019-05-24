@@ -25,10 +25,26 @@ Plugin 'airblade/vim-gitgutter'
 " Sublime-text-like multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
 
+" Adds sexy airline status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   Airline Config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+"let g:airline_theme='distinguished'
+let g:airline_theme='base16_eighties'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,7 +56,6 @@ syntax on
 
 set nu
 set bg=dark
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
