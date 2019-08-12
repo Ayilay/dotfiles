@@ -143,3 +143,9 @@ VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR
 # Change the prompt to 2-line for more compactness and less clutter
 # https://www.maketecheasier.com/8-useful-and-interesting-bash-prompts/
 PS1="[\[\033[32m\]\w]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
+
+export QSYS_ROOTDIR="/media/ayilayWindows/Users/Ayilay/Documents/LinuxLargeFiles/QuartusLiteInstallFiles/quartus/sopc_builder/bin"
+
+export GEM_HOME="$HOME/.local/installs/gems"
+export PATH="$GEM_HOME/bin:$PATH"
+

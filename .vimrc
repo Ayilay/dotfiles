@@ -64,6 +64,7 @@ set bg=dark
 
 " Indentation Settings
 filetype plugin indent on
+"set smartindent
 set cindent
 set expandtab
 
