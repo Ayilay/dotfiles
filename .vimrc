@@ -32,6 +32,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 
+" Neat shortcuts for surrounding text with pairs of characters
+Plugin 'tpope/vim-surround'
+
 call vundle#end()
 
 
