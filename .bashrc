@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm|xterm-color|*-256color) color_prompt=yes;;
+    xterm|xterm-color|*-256color*) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -149,3 +149,11 @@ export QSYS_ROOTDIR="/media/ayilayWindows/Users/Ayilay/Documents/LinuxLargeFiles
 export GEM_HOME="$HOME/.local/installs/gems"
 export PATH="$GEM_HOME/bin:$PATH"
 
+export TERM=xterm-256color-italic
+
+# added by travis gem
+[ -f /home/ayilay/.travis/travis.sh ] && source /home/ayilay/.travis/travis.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

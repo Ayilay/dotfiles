@@ -109,3 +109,8 @@ map <S-Tab> :tabp <CR>
 " Save current file with sudo privileges
 " https://www.cyberciti.biz/faq/vim-vi-text-editor-save-file-without-root-permission/
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+set t_ZH=[3m
+set t_ZR=[23m
+
+set nowrap
