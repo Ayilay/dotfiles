@@ -14,6 +14,10 @@
 *) Fix brightness button not working: https://itsfoss.com/fix-brightness-ubuntu-1310/
 *) Install flameshot screenshot tool (use debian backports if necessary) 
 *) Add xterm italic font: https://hobo.house/2017/07/17/using-italics-with-vim-in-your-terminal/
+*) Open /usr/share/vim/vim80/ftplugin, make sure C settings are:
+    setlocal fo-=t fo+=croql
+    setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/
+
 *) Faster boot:
     > Check bottlenecks w/ systemd-analyze, systemd-analyze [blame | critical-chain]
       > If NetworkManager-wait-online.service is slow, do `systemctl mask` on it to remove
