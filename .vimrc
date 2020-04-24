@@ -5,6 +5,12 @@
 set nocompatible
 filetype off
 
+" Ability to recursive-find files with :find
+set path+=**
+
+" Cool menu while tab-ing thru vim commands
+set wildmenu
+
 set rtp+=/home/ayilay/.vim/bundle/Vundle.vim
 call vundle#begin()
 
