@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=MATLAB
+GenericName=MATLAB
+Exec=/usr/local/bin/matlab -desktop
+Icon=/media/ext4ExtraStorage/R2020a/ui/webgui/src/favicon.ico

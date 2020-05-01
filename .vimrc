@@ -73,19 +73,13 @@ set bg=dark
 
 " Indentation Settings
 filetype plugin indent on
-"set smartindent
 set cindent
 set expandtab
 
-" REGULAR SETTINGS
-" set tabstop=4
-" set shiftwidth=4
-
-" UCSD RETARD SETTINGS
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-"match Error /\%81v.\+/
+match Error /\%81v.\+/
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
