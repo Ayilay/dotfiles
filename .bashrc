@@ -149,8 +149,6 @@ export QSYS_ROOTDIR="/media/ayilayWindows/Users/Ayilay/Documents/LinuxLargeFiles
 export GEM_HOME="$HOME/.local/installs/gems"
 export PATH="$GEM_HOME/bin:$PATH"
 
-export TERM=xterm-256color-italic
-
 # added by travis gem
 [ -f /home/ayilay/.travis/travis.sh ] && source /home/ayilay/.travis/travis.sh
 
@@ -160,3 +158,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Restart cinnamon if it freezes
 alias cinnamon-restart='cinnamon -replace -d :0.0 > /dev/null 2>&1 &'
+
+# Convenient alias to perform an audible beep
+export BEEP=/usr/share/sounds/gnome/default/alerts/glass.ogg
+alias beep='paplay $BEEP'
