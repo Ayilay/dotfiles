@@ -14,6 +14,7 @@
 *) Fix brightness button not working: https://itsfoss.com/fix-brightness-ubuntu-1310/
 *) Install flameshot screenshot tool (use debian backports if necessary) 
 *) Add xterm italic font: https://hobo.house/2017/07/17/using-italics-with-vim-in-your-terminal/
+   > JK Don't do this, it probably won't work. Lots of hours wasted
 *) Open /usr/share/vim/vim80/ftplugin, make sure C settings are:
     setlocal fo-=t fo+=croql
     setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/

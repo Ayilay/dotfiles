@@ -117,10 +117,6 @@ if [ -d $HOME/esp ]; then
   IDF_PATH=$HOME/esp
 fi
 
-
-# Add atollic toolchains to path
-export PATH=$PATH:/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.2.0/ARMTools/bin
-
 # When listing directories that are Other-Writeable or Sticky-OW
 # default option (green BG) is ugly. Change it to no background
 # and purple text instead
