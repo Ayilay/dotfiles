@@ -25,7 +25,7 @@ alias cp='cp -r'
 alias rm='rm -r'
 
 # Formats code (look up astyle, it's pretty nifty)
-alias myastyle='astyle --style=allman --indent=spaces=2 --convert-tabs --indent-classes --indent-switches --indent-namespaces --pad-header --pad-oper --align-pointer=type --keep-one-line-statements'
+alias myastyle='astyle --style=attach --indent=spaces=2 --convert-tabs --indent-classes --indent-switches --indent-namespaces --pad-header --pad-oper --align-pointer=type --keep-one-line-statements'
 
 # Uncomment for using tabs instead
 #alias myastyle='echo "Warning: using tabs"; astyle --style=break --indent=spaces=4 --indent-classes --indent-switches --indent-namespaces --pad-oper --unpad-paren --align-pointer=type --convert-tabs'
