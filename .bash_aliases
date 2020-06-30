@@ -35,15 +35,6 @@ function calc {
   echo "${1}" | bc -l;
 }
 
-# Launch minecraft TODO: move to /usr/local/bin or something
-# Probably not useful for you hahahaha
-alias minecraft='java -jar /home/ayilay/Documents/minecraft/Minecraft.jar'
-
-
-# Ronak was here
-alias cl='clear'
-
-
 # Try it ;)
 alias weather='curl wttr.in'
 
@@ -64,12 +55,10 @@ alias syncprog='watch grep -e Dirty: -e Writeback: /proc/meminfo'
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 # If gVim is installed, use it instead of regular vim to get clipboard support <3
-if [ -n `which gvim` ]; then
-    alias vim='gvim -v'
-fi
-
-# Invoke make with multiple parallel jobs to compile with the speed of the gods
-alias make='make -j6'
+# TODO Disabled for now
+# if [ -n `which gvim` ]; then
+#     alias vim='gvim -v'
+# fi
 
 # Opens a file manager at the current directory. Modify to use whatever your current file manager is
 alias filemanager='dolphin . 1>/dev/null 2>/dev/null &'
