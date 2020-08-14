@@ -114,3 +114,9 @@ set t_ZH=[3m
 set t_ZR=[23m
 
 set nowrap
+
+" ITALICS WORK I'm not sure how I fixed it, it magically worked one day :(
+highlight Comment cterm=italic
+
+" TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
+colorscheme monokai

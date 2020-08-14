@@ -154,3 +154,7 @@ alias cinnamon-restart='cinnamon -replace -d :0.0 > /dev/null 2>&1 &'
 # Convenient alias to perform an audible beep
 export BEEP=/usr/share/sounds/gnome/default/alerts/glass.ogg
 alias beep='paplay $BEEP'
+
+# Ruby Environment
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
