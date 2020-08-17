@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Saleae Logic
+GenericName=Saleae Logic
+Exec=/home/ayilay/.local/installs/SaleaeLogic/Logic
+Icon=/home/ayilay/.local/installs/SaleaeLogic/SaleaeLogic.ico
