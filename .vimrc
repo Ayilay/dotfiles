@@ -29,6 +29,7 @@ Plugin 'airblade/vim-gitgutter'
 "Plugin 'Valloric/YouCompleteMe'
 
 " Sublime-text-like multiple cursors
+" TODO this one is deprecated, replace w/ more recent one
 Plugin 'terryma/vim-multiple-cursors'
 
 " Adds sexy airline status bar
@@ -66,6 +67,9 @@ syntax on
 set nu
 set bg=dark
 
+" TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
+colorscheme monokai
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Indentation Settings
@@ -99,24 +103,44 @@ nnoremap <C-j> jzz
 nnoremap <C-k> kzz
 
 " Ctrl+h/l moves the tab left/right
-map <C-h> :tabm- <CR>
-map <C-l> :tabm+ <CR>
+nnoremap <C-h> :tabm- <CR>
+nnoremap <C-l> :tabm+ <CR>
 
 " Tab/Shift-Tab changes to the next/prev tab
-map <Tab> :tabn <CR>
-map <S-Tab> :tabp <CR>
+nnoremap <Tab> :tabn <CR>
+nnoremap <S-Tab> :tabp <CR>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   Convenient Shortcuts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Re-source this vimrc file
+" Mnemonic: SOurce Vimrc (sov)
+nnoremap <leader>sov :so ~ayilay/.vimrc<CR>
+
+" Open vimrc in new split buffer for editing
+" Mnemonic: Edit Vimrc (ev)
+nnoremap <leader>ev :sp ~ayilay/.vimrc<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   Various Misc Settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " Save current file with sudo privileges
 " https://www.cyberciti.biz/faq/vim-vi-text-editor-save-file-without-root-permission/
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
-set t_ZH=[3m
-set t_ZR=[23m
 
 set nowrap
 
 " ITALICS WORK I'm not sure how I fixed it, it magically worked one day :(
+set t_ZH=[1m
+set t_ZR=[21m
+
+set term=xterm-256color
 highlight Comment cterm=italic
 
-" TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
-colorscheme monokai
+hi Special ctermfg=blue guifg=Orange cterm=none gui=none
