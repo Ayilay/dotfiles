@@ -156,5 +156,5 @@ export BEEP=/usr/share/sounds/gnome/default/alerts/glass.ogg
 alias beep='paplay $BEEP'
 
 # Ruby Environment
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
