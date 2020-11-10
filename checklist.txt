@@ -12,6 +12,7 @@
 *) Add shortcuts to launch file manager (nemo) and google chrome
 *) Install konsole, and fix theme (font size and colors), add custom theme under /usr/share/konsole
 *) Add windows partition to fstab, create symlink to windows/Users/Ayilay as winAyilay under home dir
+    - TODO HOW?
 *) Config konsole tab-change shortcuts to shift-tab/ctrl-shift-tab
 *) Fix brightness button not working: https://itsfoss.com/fix-brightness-ubuntu-1310/
 *) Install flameshot screenshot tool (use debian backports if necessary) 

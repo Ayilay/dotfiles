@@ -144,3 +144,29 @@ set term=xterm-256color
 highlight Comment cterm=italic
 
 hi Special ctermfg=blue guifg=Orange cterm=none gui=none
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" LaTeX Settings for ECE161A
+" Comment out when done
+function LatexListing()
+  normal! o\begin{lstlisting}[frame=single, gobble=5]
+  normal! o\end{lstlisting}
+endfunction
+
+function LatexAlign()
+  normal! o\begin{align*}
+  normal! o\end{align*}
+endfunction
+
+" Insert LaTeX Code Listing
+" Mnemonic: Latex Listing
+nnoremap <leader>ll :call LatexListing()<CR>
+
+" Insert LaTeX Align Environment
+" Mnemonic: Latex Align
+nnoremap <leader>la :call LatexAlign()<CR>O
+
+" Insert z-variable for z transforms, with negative exponent prefix, and
+" insert mode cursor in exponent position
+" Mnemonic: Z-variable
+inoremap <leader><leader>z z^{-}<left>
