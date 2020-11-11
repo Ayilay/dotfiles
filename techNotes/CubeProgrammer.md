@@ -19,10 +19,10 @@ Make sure to follow the Convenience Setup section before to setup a symlink to t
 ## Useful Commands
 
 #### Establish connection
-Connect to debug probe and ensure target is connected:
 ```
 stm32programmer_cli -c port=SWD
 ```
+Connects to debug probe and prints basic diagnostics. Ensures targed is connected.
 
 #### Mass-erase memory
 ```
@@ -31,7 +31,7 @@ stm32programmer_cli -c port=SWD -e all
 
 #### Mass-erase memory (UNDER RESET)
 Hold Reset Button and release shortly after
-(helpful if programmer failing to detect target):
+(helpful if programmer failing to detect target)
 ```
 stm32programmer_cli -c port=SWD mode=UR -e all
 ```
@@ -53,7 +53,7 @@ Note: `-rst` resets target after upload; optional
 ### Modify Runtime Scripts
 Navigate to install directory, probably `~/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin`
 
-Replace contents of `STM32_Programmer.sh` as follows (to resolve symlink for script location):
+Replace contents of `STM32_Programmer.sh` as follows (to resolve symlink for script location)
 
 Old Lines:
 ```
