@@ -78,6 +78,8 @@ colorscheme monokai
 " Indentation Settings
 filetype plugin indent on
 set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 set expandtab
 
 set shiftwidth=2
@@ -169,4 +171,4 @@ nnoremap <leader>la :call LatexAlign()<CR>O
 " Insert z-variable for z transforms, with negative exponent prefix, and
 " insert mode cursor in exponent position
 " Mnemonic: Z-variable
-inoremap <leader><leader>z z^{-}<left>
+"inoremap <leader><leader>z z^{-}<left>
