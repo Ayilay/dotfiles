@@ -140,7 +140,7 @@ VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR
 # https://www.maketecheasier.com/8-useful-and-interesting-bash-prompts/
 PS1="[\[\033[32m\]\w\[\033[0m\]]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
 
-export QSYS_ROOTDIR="/media/ayilayWindows/Users/Ayilay/Documents/LinuxLargeFiles/QuartusLiteInstallFiles/quartus/sopc_builder/bin"
+export QSYS_ROOTDIR="/home/ayilay/intelFPGA_lite/19.1/quartus/sopc_builder/bin"
 
 export GEM_HOME="$HOME/.local/installs/gems"
 export PATH="$GEM_HOME/bin:$PATH"
@@ -154,6 +154,10 @@ alias cinnamon-restart='cinnamon -replace -d :0.0 > /dev/null 2>&1 &'
 # Convenient alias to perform an audible beep
 export BEEP=/usr/share/sounds/gnome/default/alerts/glass.ogg
 alias beep='paplay $BEEP'
+
+[ -d /home/ayilay/.cargo/bin ] && export PATH="$PATH:/home/ayilay/.cargo/bin"
+
+
 
 # Ruby Environment
 #export PATH="$HOME/.rbenv/bin:$PATH"

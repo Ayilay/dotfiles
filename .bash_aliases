@@ -54,6 +54,9 @@ alias syncprog='watch grep -e Dirty: -e Writeback: /proc/meminfo'
 # When ranger exits, exit in the last directory selected
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
+# Run df command BUT only show sdXX partitions, plus header
+alias dfsda='df -h 2>/dev/null | head -n 1; df -h 2>/dev/null | \grep sd 2>/dev/null'
+
 # If gVim is installed, use it instead of regular vim to get clipboard support <3
 # TODO Disabled for now
 # if [ -n `which gvim` ]; then
