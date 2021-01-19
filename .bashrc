@@ -100,22 +100,24 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+################################################################################
+#   Source specific useful files if they exist
+################################################################################
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 
 # Add local scripts to path
 export PATH=$PATH:$HOME/.local/scripts
 
 # Add ESP development toolchains if they exist
-if [ -d $HOME/esp ]; then
-  IDF_PATH=$HOME/esp
-fi
+[ -d $HOME/esp ] && export IDF_PATH=$HOME/esp
+
+# Rust Toolchains
+[ -d /home/ayilay/.cargo/bin ] && export PATH="$PATH:/home/ayilay/.cargo/bin"
+
+# Bash Completion Scripts
+[ -f $HOME/.bash_completion ] && source $HOME/.bash_completion
+
 
 # When listing directories that are Other-Writeable or Sticky-OW
 # default option (green BG) is ugly. Change it to no background
@@ -156,10 +158,6 @@ alias cinnamon-restart='cinnamon -replace -d :0.0 > /dev/null 2>&1 &'
 # Convenient alias to perform an audible beep
 export BEEP=/usr/share/sounds/gnome/default/alerts/glass.ogg
 alias beep='paplay $BEEP'
-
-[ -d /home/ayilay/.cargo/bin ] && export PATH="$PATH:/home/ayilay/.cargo/bin"
-
-
 
 # Ruby Environment
 #export PATH="$HOME/.rbenv/bin:$PATH"

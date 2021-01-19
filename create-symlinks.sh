@@ -7,7 +7,7 @@
 ################################################################################
 
 BACK_SUFF="backup"
-DOTFILES=(".bashrc" ".vimrc" ".bash_aliases" ".gitconfig" ".tmux.conf" ".gtkwaverc")
+DOTFILES=(".bashrc" ".vimrc" ".bash_aliases" ".gitconfig" ".tmux.conf" ".gtkwaverc" ".bash_completion")
 
 # Create backups of all existing dot files
 for i in ${DOTFILES[*]}; do
