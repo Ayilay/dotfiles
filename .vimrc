@@ -11,7 +11,7 @@ set path+=**
 " Cool menu while tab-ing thru vim commands
 set wildmenu
 
-set rtp+=/home/ayilay/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Needed for Vundle to run
@@ -123,11 +123,11 @@ nnoremap <S-Tab> :tabp <CR>
 
 " Re-source this vimrc file
 " Mnemonic: SOurce Vimrc (sov)
-nnoremap <leader>sov :so ~ayilay/.vimrc<CR>
+nnoremap <leader>sov :so $HOME/.vimrc<CR>
 
 " Open vimrc in new split buffer for editing
 " Mnemonic: Edit Vimrc (ev)
-nnoremap <leader>ev :sp ~ayilay/.vimrc<CR>
+nnoremap <leader>ev :sp $HOME/.vimrc<CR>
 
 " Search and Replace word under cursor
 " Mnemonic: <leader>s, because <leader> does cool stuff,
