@@ -1,0 +1,6 @@
+fontname_signals Monospace 10
+fontname_waves   Monospace 10
+splash_disable on
+fill_waveform 1
+color_back 282828
+color_grid 555555
