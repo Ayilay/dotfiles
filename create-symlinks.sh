@@ -7,7 +7,7 @@
 ################################################################################
 
 BACK_SUFF="backup"
-DOTFILES=(".bashrc" ".vimrc" ".bash_aliases" ".gitconfig" ".tmux.conf")
+DOTFILES=(".bashrc" ".vimrc" ".bash_aliases" ".gitconfig" ".tmux.conf" ".gtkwaverc")
 
 # Create backups of all existing dot files
 for i in ${DOTFILES[*]}; do
@@ -15,7 +15,7 @@ for i in ${DOTFILES[*]}; do
         echo "Creating backup of $i as $i.$BACK_SUFF"
         mv $HOME/$i $HOME/$i.$BACK_SUFF
     else
-        echo "$i doesn't exist in directory $HOME, skipping"
+        echo "$i doesn't exist in directory $HOME, no backup made"
     fi
 done
 
