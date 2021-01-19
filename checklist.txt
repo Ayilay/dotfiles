@@ -11,8 +11,8 @@
 *) Install google chrome
 *) Add shortcuts to launch file manager (nemo) and google chrome
 *) Install konsole, and fix theme (font size and colors), add custom theme under /usr/share/konsole
-*) Add windows partition to fstab, create symlink to windows/Users/Ayilay as winAyilay under home dir
-    - TODO HOW?
+*) Add windows partition to fstab, create symlink to windows/Users/Ayilay as winAyilay under home dir:
+    /dev/sdXX /<MOUNT_LOC> ntfs rw,nodev,nosuid,uid=1000,gid=1000,uhelper=udisks2 0 1
 *) Config konsole tab-change shortcuts to shift-tab/ctrl-shift-tab
 *) Fix brightness button not working: https://itsfoss.com/fix-brightness-ubuntu-1310/
 *) Install flameshot screenshot tool (use debian backports if necessary) 
