@@ -118,12 +118,6 @@ export PATH=$PATH:$HOME/.local/scripts
 # Bash Completion Scripts
 [ -f $HOME/.bash_completion ] && source $HOME/.bash_completion
 
-
-# When listing directories that are Other-Writeable or Sticky-OW
-# default option (green BG) is ugly. Change it to no background
-# and purple text instead
-export LS_COLORS="$LS_COLORS:ow=1;35:tw=1;35:"
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
