@@ -1,6 +1,6 @@
 # These are useful when working with i3
 # Copies working directory into clipboard (needs xclip)
-alias cpwd='pwd | xclip -sel c'
+alias cpwd='pwd | tr -d '\n'| xclip -sel c'
 # cd to filepath in clipboard (needs xclip)
 alias cdp='cd `xclip -selection c -o`'
 
