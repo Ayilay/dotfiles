@@ -24,26 +24,12 @@ Plugin 'easymotion/vim-easymotion'
 " Adds git status indicators
 Plugin 'airblade/vim-gitgutter'
 
-" QML Syntax Highlighting
-Plugin 'crucerucalin/qml.vim'
-
-" Absolute Wankery, look this up
-"Plugin 'rdnetto/YCM-Generator'
-"Plugin 'Valloric/YouCompleteMe'
-
 " Sublime-text-like multiple cursors
-" TODO this one is deprecated, replace w/ more recent one
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'mg979/vim-visual-multi'
 
 " Adds sexy airline status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" NerdTree
-Plugin 'scrooloose/nerdtree'
-
-" Neat shortcuts for surrounding text with pairs of characters
-Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
@@ -70,9 +56,6 @@ syntax on
 set nu
 set bg=dark
 
-" TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
-colorscheme monokai
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Indentation Settings
@@ -87,7 +70,7 @@ set expandtab
 
 set shiftwidth=2
 set tabstop=2
-set softtabstop=2
+"set softtabstop=2
 "match Error /\%81v.\+/
 
 
@@ -154,6 +137,22 @@ set term=xterm-256color
 highlight Comment cterm=italic
 
 hi Special ctermfg=blue guifg=Orange cterm=none gui=none
+
+"------------------------------------------------------------
+" Whitespace highlighting options
+" https://vim.fandom.com/wiki/Highlight_unwanted_spaces
+"------------------------------------------------------------
+
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+
+" Show trailing whitespace:
+match ExtraWhitespace /\s\+$/
+
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+
+" TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
+colorscheme monokai
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " LaTeX Settings for ECE161A
