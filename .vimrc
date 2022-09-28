@@ -31,6 +31,9 @@ Plugin 'mg979/vim-visual-multi'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" LMFAO
+Plugin 'vim/killersheep'
+
 call vundle#end()
 
 
@@ -68,8 +71,10 @@ set cinkeys-=0#
 set indentkeys-=0#
 set expandtab
 
-set shiftwidth=2
-set tabstop=2
+" temporary settings
+set shiftwidth=4
+set tabstop=4
+set tw=0
 "set softtabstop=2
 "match Error /\%81v.\+/
 
@@ -97,6 +102,8 @@ nnoremap <C-l> :tabm+ <CR>
 " Tab/Shift-Tab changes to the next/prev tab
 nnoremap <Tab> :tabn <CR>
 nnoremap <S-Tab> :tabp <CR>
+
+set relativenumber
 
 
 
@@ -145,13 +152,14 @@ hi Special ctermfg=blue guifg=Orange cterm=none gui=none
 
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 
-" Show trailing whitespace:
-match ExtraWhitespace /\s\+$/
+" Show trailing whitespace (JK this is pretty yucky, find way to show only in
+" normal mode and not insert mode)
+" match ExtraWhitespace /\s\+$/
 
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 
 " TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
-colorscheme monokai
+"colorscheme monokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""

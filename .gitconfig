@@ -12,3 +12,7 @@
 	unstage = reset HEAD --
 	gconf = config --global
 	hist = log --graph --oneline --decorate --all
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
