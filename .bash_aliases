@@ -65,3 +65,5 @@ alias dfsda='df -h 2>/dev/null | head -n 1; df -h 2>/dev/null | \grep sd 2>/dev/
 
 # Opens a file manager at the current directory. Modify to use whatever your current file manager is
 alias filemanager='dolphin . 1>/dev/null 2>/dev/null &'
+
+alias ergodev="node ~/github/ergogen/src/cli.js"
