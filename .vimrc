@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Vundle Config and Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -20,9 +20,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Makes it easier to navigate through words
 " Use <leader><leader>w/b to go forwards/backwards
 Plugin 'easymotion/vim-easymotion'
-
-" Adds git status indicators
-Plugin 'airblade/vim-gitgutter'
 
 " Sublime-text-like multiple cursors
 Plugin 'mg979/vim-visual-multi'
@@ -56,6 +53,7 @@ syntax on
 set nu
 set bg=dark
 
+set relativenumber
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Indentation Settings
@@ -143,15 +141,10 @@ hi Special ctermfg=blue guifg=Orange cterm=none gui=none
 " https://vim.fandom.com/wiki/Highlight_unwanted_spaces
 "------------------------------------------------------------
 
-highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-
 " Show trailing whitespace:
-match ExtraWhitespace /\s\+$/
-
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-
-" TODO Modify colorscheme a little bit bc default Molokai is hard on the eyes
-colorscheme monokai
+"highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+"match ExtraWhitespace /\s\+$/
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
