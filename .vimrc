@@ -58,6 +58,11 @@ set bg=dark
 
 set relativenumber
 
+augroup zmk_keymap_ft
+    au!
+    autocmd BufNewFile,BufRead *.keymap set syntax=c
+augroup END
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Indentation Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,7 +92,7 @@ set tw=0
 set clipboard=unnamedplus
 
 " Change the leader key to ',' for various shortcuts
-let mapleader = ','
+let mapleader = ' '
 
 " When pressing Ctrl+j/k, scroll up/down while maintaining the cursor centered
 nnoremap <C-j> jzz
@@ -135,13 +140,48 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 set nowrap
 
 " ITALICS WORK I'm not sure how I fixed it, it magically worked one day :(
-set t_ZH=[1m
-set t_ZR=[21m
+"set t_ZH=[1m
+"set t_ZR=[21m
 
 set term=xterm-256color
-highlight Comment cterm=italic
+"highlight Comment cterm=italic
 
 hi Special ctermfg=blue guifg=Orange cterm=none gui=none
+
+
+"------------------------------------------------------------
+" Custom text objects
+" https://thevaluable.dev/vim-create-text-objects/
+"------------------------------------------------------------
+
+function! IndentTextObject()
+  let startindent = indent(line('.'))
+
+  " Move up till we are at the top of the buffer
+  " or till the indentation is less than the starting one
+  let prevline = line('.') - 1
+  while prevline > 0 && (indent(prevline) >= startindent || (prevline) =~ "^\\s*$")
+    -
+    let prevline = line('.') - 1
+  endwhile
+
+  " Begin linewise-visual selection
+  normal! 0V
+
+  " Move down till we are at the bottom of the buffer
+  " or till the indentation is less than the starting one
+  let nextline = line('.') + 1
+  let lastline = line('$')
+  while nextline <= lastline && (indent(nextline) >= startindent || (nextline) =~ "^\\s*$")
+    +
+    let nextline = line('.') + 1
+  endwhile
+endfunction
+
+onoremap <silent>ai :<C-U>call IndentTextObject()<CR>
+onoremap <silent>ii :<C-U>call IndentTextObject()<CR>
+xnoremap <silent>ai :<C-U>call IndentTextObject()<CR>
+xnoremap <silent>ii :<C-U>call IndentTextObject()<CR>
 
 "------------------------------------------------------------
 " Whitespace highlighting options

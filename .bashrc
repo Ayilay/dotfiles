@@ -140,3 +140,11 @@ export LS_COLORS="$LS_COLORS:ow=1;35:tw=1;35:"
 export LS_COLORS="$LS_COLORS:ln=36;04"
 
 set PROMPT_DIRTRIM=5
+
+# Rust/Cargo binaries etc
+export PATH="$PATH:$HOME/.cargo/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
