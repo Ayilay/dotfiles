@@ -57,10 +57,20 @@ set nu
 set bg=dark
 
 set relativenumber
+set cursorline
+
+" No auto-comment when pressing enter after c-style // comment
+set comments-=://
+
 
 augroup zmk_keymap_ft
     au!
     autocmd BufNewFile,BufRead *.keymap set syntax=c
+augroup END
+
+augroup zephyr_overlay
+    au!
+    autocmd BufNewFile,BufRead *.overlay set syntax=dts
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,12 +109,12 @@ nnoremap <C-j> jzz
 nnoremap <C-k> kzz
 
 " Ctrl+h/l moves the tab left/right
-nnoremap <C-h> :tabm- <CR>
-nnoremap <C-l> :tabm+ <CR>
+"nnoremap <C-h> :bprev <CR>
+"nnoremap <C-l> :bnext <CR>
 
 " Tab/Shift-Tab changes to the next/prev tab
-nnoremap <Tab> :tabn <CR>
-nnoremap <S-Tab> :tabp <CR>
+nnoremap <Tab>   :bnext <CR>
+nnoremap <S-Tab> :bprev <CR>
 
 set relativenumber
 
@@ -209,3 +219,15 @@ xnoremap <silent>ii :<C-U>call IndentTextObject()<CR>
 "" Insert LaTeX Align Environment
 "" Mnemonic: Latex Align
 "nnoremap <leader>la :call LatexAlign()<CR>O
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Netrw settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:netrw_banner = 0
+
+set tags=tags;/,
+
+" In .size file, REMOVE the t/T (text) segments
+" So we can inspect size of variables only
+" %s/^\([^ ]\+ \)\{2\}[tT].*\n//
+
