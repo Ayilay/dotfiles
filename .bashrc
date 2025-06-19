@@ -161,7 +161,8 @@ banging_prompt() {
     local HSTNM=""
     local SEP=""
     local IAMROOT=""
-    local PRMPT="${GRN}8=>"
+    local PRMPT="${YLW}8=>"
+    #local PRMPT="${YLW}$"
 
     if [[ $(whoami) = "root" ]]; then
         PRMPT="${RED}8===>"
@@ -177,10 +178,12 @@ banging_prompt() {
     shopt -u nocasematch
 
     PS1="[${IAMROOT}${HSTNM}${SEP}${GRN}\w${CLR}]"
-    PS1="${PS1}\n"
-    PS1="${PS1}${YLW}${PRMPT}${CLR} "
-    set PROMPT_DIRTRIM=5
 
+    # Separator from directory to prompt
+    PS1="${PS1}\n"
+    #PS1="${PS1} "
+
+    PS1="${PS1}${YLW}${PRMPT}${CLR} "
     alias ~~~='echo You pervert'
 }
 
@@ -189,3 +192,5 @@ create_prompt() {
 }
 
 create_prompt
+export PROMPT_DIRTRIM=5
+

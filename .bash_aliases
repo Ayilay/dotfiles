@@ -67,3 +67,10 @@ alias dfsda='df -h 2>/dev/null | head -n 1; df -h 2>/dev/null | \grep sd 2>/dev/
 alias filemanager='dolphin . 1>/dev/null 2>/dev/null &'
 
 alias ergodev="node ~/github/ergogen/src/cli.js"
+
+# Source the zephyr python venv
+alias zephyrStart="source ~/Documents/ZephyrTftp/.venv/bin/activate"
+
+alias cgrep='grep -r --include="*.c"'
+alias hgrep='grep -r --include="*.h"'
+alias chgrep='grep -r --include="*.[ch]"'
