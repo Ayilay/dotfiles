@@ -78,6 +78,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Add local scripts to path
 export PATH=$PATH:$HOME/.local/scripts
+export PATH=$PATH:$HOME/.local/bin
 
 # Add ESP development toolchains if they exist
 [ -d $HOME/esp ] && export IDF_PATH=$HOME/esp
@@ -194,3 +195,9 @@ create_prompt() {
 create_prompt
 export PROMPT_DIRTRIM=5
 
+# Rust Options
+. "$HOME/.cargo/env"
+export CARGO_CARGO_NEW_VCS=none
+
+# Local libraries
+export UNITYTEST_PATH="${HOME}/.local/libs/Unity/v2.6.1"

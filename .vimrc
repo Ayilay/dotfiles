@@ -11,27 +11,27 @@ set path+=**
 " Cool menu while tab-ing thru vim commands
 set wildmenu
 
-set rtp+=$HOME/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=$HOME/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
 " Needed for Vundle to run
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
+"
+"" Makes it easier to navigate through words
+"" Use <leader><leader>w/b to go forwards/backwards
+"Plugin 'easymotion/vim-easymotion'
+"
+"" Sublime-text-like multiple cursors
+"Plugin 'mg979/vim-visual-multi'
+"
+"" Adds sexy airline status bar
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"
+"" LMFAO
+"Plugin 'vim/killersheep'
 
-" Makes it easier to navigate through words
-" Use <leader><leader>w/b to go forwards/backwards
-Plugin 'easymotion/vim-easymotion'
-
-" Sublime-text-like multiple cursors
-Plugin 'mg979/vim-visual-multi'
-
-" Adds sexy airline status bar
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" LMFAO
-Plugin 'vim/killersheep'
-
-call vundle#end()
+"call vundle#end()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -55,9 +55,10 @@ syntax on
 
 set nu
 set bg=dark
+"set hlsearch
 
 set relativenumber
-set cursorline
+"set cursorline
 
 " No auto-comment when pressing enter after c-style // comment
 set comments-=://
@@ -90,6 +91,15 @@ set tabstop=4
 set tw=0
 "set softtabstop=2
 "match Error /\%81v.\+/
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   Search/Replace Settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use very-magic pattern matching by default (see 'help magic')
+" Treats most regex characters like advanced regex
+" ( the way RegEx God intended )
+nnoremap / /\v
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -188,10 +198,10 @@ function! IndentTextObject()
   endwhile
 endfunction
 
-onoremap <silent>ai :<C-U>call IndentTextObject()<CR>
-onoremap <silent>ii :<C-U>call IndentTextObject()<CR>
-xnoremap <silent>ai :<C-U>call IndentTextObject()<CR>
-xnoremap <silent>ii :<C-U>call IndentTextObject()<CR>
+"onoremap <silent>ai :<C-U>call IndentTextObject()<CR>
+"onoremap <silent>ii :<C-U>call IndentTextObject()<CR>
+"xnoremap <silent>ai :<C-U>call IndentTextObject()<CR>
+"xnoremap <silent>ii :<C-U>call IndentTextObject()<CR>
 
 "------------------------------------------------------------
 " Whitespace highlighting options

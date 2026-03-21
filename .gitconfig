@@ -1,5 +1,5 @@
 [user]
-	name = Ayilay
+	name = George Troulis
 	email = georgetroulis@gmail.com
 
 [core]
@@ -9,12 +9,12 @@
     default = current
 
 [alias]
-	unstage = reset HEAD --
-	gconf = config --global
-	hist = log --graph --oneline --decorate --all -n 20
-	lhist = log --graph --oneline --decorate --all
+	ahist = log --graph --oneline --decorate --all -n 20
+	alhist = log --graph --oneline --decorate --all
+	hist = log --graph --oneline --decorate  -n 20
+	lhist = log --graph --oneline --decorate
 
 [pull]
 	rebase = false
 [init]
-	defaultBranch = master
+	defaultBranch = main
